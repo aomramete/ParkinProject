@@ -1,0 +1,46 @@
+<ion-app>
+  <ion-router-outlet [swipeGesture]="false"></ion-router-outlet>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Parking Lots</ion-title>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/maps']" routerDirection="forward">
+          <ion-icon slot="icon-only" name="map-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-searchbar (ionInput)="getItems($event)" [debounce]="500" placeholder="Type the paking lot that you want"></ion-searchbar>
+    </ion-toolbar>
+
+  </ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="lines"
+      pullingText="Pull to refresh"
+      refreshingSpinner="lines"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-item expand="full" fill="outline" [routerLink]="['/filter']" routerDirection="forward">Click to Filter By Date
+  </ion-item>
+  <!-- <ion-datetime #DateFilter displayFormat="DD MMM YYYY"  placeholder="Specify Date"></ion-datetime>
+    <ion-button shape="round" fill="outline" (click)="OnClickFilterBtn()">OK</ion-button> -->
+  <ion-list> 
+  <ion-item *ngFor="let item of users" [routerLink]="['/details/', item.meter_ID]" routerDirection="forward">
+        <ion-avatar slot="start">
+          <img [src]="item.URLimage">
+        </ion-avatar>
+        <br>
+        <ion-label>
+          <h2 text-capitalize>{{ item.meter_Name }}</h2>
+          <p text-capitalize> Average Price Per Hour : {{ item.price }} THB</p>
+          <!-- <p *ngIf="filterData" text-capitalize> Times Reserved : {{ filterData[i].reservetime }}</p> -->
+        </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-app>

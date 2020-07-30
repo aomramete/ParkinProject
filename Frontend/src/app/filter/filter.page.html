@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filter By Date</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-datetime #DateFilter displayFormat="DD MMM YYYY"  placeholder="Specify Date"></ion-datetime>
+  <ion-button expand="full" shape="round" fill="outline" (click)="OnClickFilterBtn()">OK</ion-button>
+</ion-list>
+<ion-list> 
+  <ion-item *ngFor="let item of filterData" [routerLink]="['/details/', item.meter_ID]" routerDirection="forward">
+        <ion-avatar slot="start">
+          <img [src]="item.URLimage">
+        </ion-avatar>
+        <br>
+        <ion-label>
+          <h2 text-capitalize>{{ item.meter_Name }}</h2>
+          <p text-capitalize> Average Price Per Hour : {{ item.price }} THB</p>
+          <p text-capitalize> Times Reserved : {{ item.reservetime }} Times</p>
+        </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

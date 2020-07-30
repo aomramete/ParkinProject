@@ -1,0 +1,9 @@
+{
+  "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "authDomain": "XXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "databaseURL": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "projectId": "XXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "storageBucket": "XXXXXXXXXXXXXXXXXX" # Change this!,
+  "messagingSenderId": "XXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "appId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!
+}

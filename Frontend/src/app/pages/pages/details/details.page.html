@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Parking Meter Detail</ion-title>
+    </ion-toolbar>
+   </ion-header>
+  
+    <ion-content fullscreen *ngFor="let detail of details">
+      <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="lines"
+          pullingText="Pull to refresh"
+          refreshingSpinner="lines"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher> -->
+      <ion-card>
+        <img [src]="detail.URLimage"/>
+        <ion-card-header>
+          <ion-card-subtitle>Parking Meter Detail</ion-card-subtitle>
+          <ion-card-title>{{ detail.meter_Name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Price Per Hour : {{ detail.price }} THB
+          <br>
+          
+        </ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Reservations Record</ion-card-subtitle>
+
+        </ion-card-header>
+        <ion-card-content *ngFor="let items of reserveDetails">
+          This meter reserved on : {{ items.reserve_from }} To : {{items.reserve_to}}
+        </ion-card-content>
+      </ion-card>
+      <ion-button expand="block" color="light" [routerLink]="['/reserve/', detail.meter_ID]" routerDirection="forward">Reserve Parking Lot
+      </ion-button>
+    </ion-content>
+  
+  
+  
+    <!-- <ion-list *ngFor="let detail of details">
+        <img [src]="detail.URLimage" width="10%">
+      <ion-label>
+        <br>
+        <h2>{{ detail.meter_Name }}</h2>
+        <p>Average price : {{ detail.price }}</p>
+        <p>Status : {{ detail.Status }}</p>
+      </ion-label>
+      <ion-button expand="block" [routerLink]="['/reserve/', detail.meter_ID]" routerDirection="forward">Reserve Parking Lot
+      </ion-button>
+  </ion-list>
+  <h3>List of reservations</h3>
+  <ion-list *ngFor="let items of reserveDetails">
+    <ion-row>
+      <ion-col size="4
+      ">This meter reserved on : {{ items.reserve_from_Date }} at {{items.reserve_from_time}}</ion-col>
+    </ion-row>
+  </ion-list> -->
+  </ion-app>

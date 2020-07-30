@@ -1,0 +1,11 @@
+Flask==1.1.2
+flask-restful==0.3.8
+flask-cors==3.0.7
+requests==2.18.4
+Flask-Ext==0.1
+PyMySQL==0.9.3
+flask-mysql==1.5.1
+firebase-admin==3.1.0
+Pyrebase==3.0.16
+PyJWT==1.7.1
+uwsgi==2.0.19.1

@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/reserve/:myid"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Pay For Reservation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card mode="ios">
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">Total Price</ion-card-subtitle>
+        <ion-card-title class="ion-text-center">{{this.finalAmount}} THB</ion-card-title>
+      </ion-card-header>
+
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12" class="ion-text-center">
+    
+    <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+    <div id="paypal-checkout-btn"></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+</ion-content>
+    <!-- <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>
+          <h2>Total Price {{this.finalAmount}}</h2>
+        </ion-card-subtitle>
+        <ion-card-content>
+          <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+          <div id="paypal-checkout-btn"></div>
+        </ion-card-content>
+      </ion-card-header>
+    </ion-card> -->

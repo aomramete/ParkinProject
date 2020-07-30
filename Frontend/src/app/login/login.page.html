@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title class="ion-text-center">ParkIn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-card mode="ios">
+    <!-- <img class="icon" src="assets/logoParkin.png" alt=""> -->
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Before Using</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">Log in here</ion-card-title>
+    </ion-card-header>
+
+    <!-- <form autocomplete="off" (submit)="doLogin()">
+  
+        <ion-item>
+          <ion-label position="stacked" > Username <span class="text-danger">*</span></ion-label>
+          <ion-input type="text" [(ngModel)]="email" name="email" required="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" > Password <span class="text-danger">*</span></ion-label>
+          <ion-input [(ngModel)]="password" type="password" name="password" required="true"></ion-input>
+        </ion-item>
+      </form> -->
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" class="ion-text-center">
+          <ion-button class="ion-activatable ripple-parent" class="google" (click)="loginGoogle()">
+            <!-- <ion-icon name ="logo-google"></ion-icon> -->
+            <p>Login With Your Google Account</p>
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" class="ion-text-center">
+          <ion-button (click)="regist()" class="ion-activatable ripple-parent" color="medium">
+            <p class="ion-text-center">New user? Click here!</p>
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+  </ion-card>
+
+  <!-- <div class="ion-text-center ion-margin-top">
+    <a routerLink="/registro"><small>New user? Click here!</small></a>
+  </div> -->
+
+</ion-content>

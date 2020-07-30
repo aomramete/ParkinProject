@@ -1,0 +1,53 @@
+<ion-app>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/reservedata"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reserved Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen *ngFor="let detail of reservedata">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="lines"
+      pullingText="Pull to refresh"
+      refreshingSpinner="lines"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <img [src]="detail.URLimage" />
+    <ion-card-header>
+      <ion-card-subtitle>Reservation Record</ion-card-subtitle>
+      <ion-card-title>{{ detail.meter_Name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Amount : {{ detail.price }} THB
+      <p>Reserve From : {{ detail.reserve_from }}</p>
+      <p>Reserve To : {{ detail.reserve_to}}</p>
+      <br>
+      <h4 class="ion-text-center">4-Digit Passcode : {{ detail.passcode }}</h4>
+    </ion-card-content>
+  </ion-card>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button class="ion-activatable ripple-parent" color="success" (click)="confirm()"> 
+          <p>Arrived</p> 
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-button>
+        <ion-button class="ion-activatable ripple-parent" color="danger" (click)="leave()"> 
+          <p>Leave</p> 
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-button>
+        </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button class="ion-activatable ripple-parent" color="medium" (click)="cancel()">
+          <p>Cancel This Reservation</p>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+</ion-content>
+</ion-app>

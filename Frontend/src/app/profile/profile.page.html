@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="this.global.ProfilePic">
+      </ion-avatar>
+      <ion-label>
+        <h3>Hello, {{this.global.ProfileName}}!</h3>
+        <p>{{this.global.email}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item expand="full" fill="outline" (click)="reservedata()">My Reservations
+  </ion-item>
+  <ion-item expand="full" fill="outline" (click)="logout()">Logout</ion-item>
+</ion-content>

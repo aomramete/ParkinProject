@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/details/:myid"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reservation Page</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content fullscreen>
+      <ion-toolbar>
+  
+        <ion-item>
+          <ion-title>Pick Reservation Time</ion-title>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>From</ion-label>
+          <ion-item>
+            <ion-datetime #DateFromInput type="text" value="" displayFormat="MM/DD/YYYY" placeholder="Select Date"></ion-datetime>
+            <!-- <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="myDate" placeholder="Select Time"></ion-datetime> -->
+            <ion-datetime #TimeFromInput type="text" value="" displayFormat="HH:mm" minuteValues="0,15,30,45" placeholder="Select Time"></ion-datetime>
+          </ion-item>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>To</ion-label>
+          <ion-item>
+            <ion-datetime #DateToInput type="text" value="" displayFormat="MM/DD/YYYY" placeholder="Select Date"></ion-datetime>
+            <ion-datetime #TimeToInput type="text" value="" displayFormat="HH:mm" minuteValues="0,15,30,45" placeholder="Select Time"></ion-datetime>
+          </ion-item>
+        </ion-item>
+    
+        <div padding>
+          <ion-button expand="full" shape="round" fill="outline" (click)="OnClickReserveBtn()">Reserve</ion-button>
+        </div>
+  
+      </ion-toolbar>
+</ion-content>

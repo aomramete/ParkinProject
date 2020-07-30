@@ -1,0 +1,13 @@
+{
+  "type": "XXXXXXXXXXXXXXXXXX" # Change this!,
+  "project_id": "XXXXXXXXXXXXXXXXXX" # Change this!,
+  "private_key_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "private_key": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "client_email": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "client_id": "XXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "auth_uri": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "token_uri": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "auth_provider_x509_cert_url": "XXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!,
+  "client_x509_cert_url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Change this!
+}
+
