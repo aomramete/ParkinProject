@@ -7,5 +7,5 @@ PyMySQL==0.9.3
 flask-mysql==1.5.1
 firebase-admin==3.1.0
 Pyrebase==3.0.16
-PyJWT==1.7.1
+PyJWT==2.4.0
 uwsgi==2.0.19.1
